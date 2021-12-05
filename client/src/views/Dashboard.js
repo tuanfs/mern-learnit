@@ -16,13 +16,12 @@ import addIcon from '../assets/plus-circle-fill.svg';
 
 function Dashboard(props) {
     const {
-        postState: { postEdit, posts, postsLoading },
+        postState: { postEdit, posts, postLoading },
         getPosts,
         setShowAddPostModal,
         showToast: { show, message, type },
         setShowToast,
     } = useContext(PostContext);
-
     const {
         authState: {
             user: { username },
@@ -32,7 +31,7 @@ function Dashboard(props) {
     useEffect(() => getPosts(), []);
     let body = null;
 
-    if (postsLoading) {
+    if (postLoading) {
         body = (
             <div className='spinner-container'>
                 <Spinner animation='border' variant='info' />
