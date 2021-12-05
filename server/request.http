@@ -1,0 +1,41 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "tuanfs22",
+    "password": "tuanfs"
+}
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "tuanfs",
+    "password": "tuanfs"
+}
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE5OWI3OTVlNDk4MjhlNGE4ZTQ4MjgiLCJpYXQiOjE2Mzg2MzEyNzF9.E2AUHVXd0b2MTg3wYgeqRiUuK1MuC0ksarloMlfs_WA
+
+{
+    "title": "JavascriptJs",
+   "description": "Học để đi làm",
+   "url": "javascript.org",
+   "status": "To Learn"
+}
+###
+PUT http://localhost:5000/api/posts/61a9e4ffee2ac38c6fd8e46d
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE5OWI3OTVlNDk4MjhlNGE4ZTQ4MjgiLCJpYXQiOjE2Mzg2MzEyNzF9.E2AUHVXd0b2MTg3wYgeqRiUuK1MuC0ksarloMlfs_WA
+
+{
+    "title": "Vuee",
+    "description": "Vueeeeeee",
+    "url": "vue.org",
+    "status": "Learning"
+}
+
+###
+DELETE http://localhost:5000/api/posts/61a9e4ffee2ac38c6fd8e46d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MWE5OWI3OTVlNDk4MjhlNGE4ZTQ4MjgiLCJpYXQiOjE2Mzg1MjQxMzB9.udm8dUbAYOgpTMeiwXGU-DhVdbkViOiDObeKFa44xhE
